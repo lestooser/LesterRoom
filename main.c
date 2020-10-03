@@ -39,7 +39,7 @@ void main() {
 	b = pow(b, 2);
 	qd(a, b);
 	printf("sum = %.2f, dif = %.2f, prod = %.2f, quo = %.2f\n", Sum, Dif, Pr, mod);
-	printf("¬ведите последние 2 числа : \n");
+	printf("Enter last 2 num : \n");
 	scanf_s("%f%f", &a, &b);
 	a = fabsf(a);
 	b = fabsf(b);
