@@ -45,5 +45,4 @@ void main() {
 	b = fabsf(b);
 	qd(a, b);
 	printf("sum = %.2f, dif = %.2f, prod = %.2f, quo = %.2f\n", Sum, Dif, Pr, mod);
-	system("pause")
 }
