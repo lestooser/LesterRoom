@@ -17,8 +17,8 @@ void main() {
 	printf("enter your numbers : ");
 	scanf_s("%f%f%f%f", &x, &a, &y, &res);
 	if (x < a) x = a - x; 
-	else { x -= a; } // x - разность скоростей
-	x *= res; // х - пройденное расстояние
+	else { x -= a; }
+	x *= res; 
 	printf("distance = %.2f\n", x + y);
 	printf("Enter A and B for Ax+B=0: ");
 	scanf_s("%f%f", &a, &x);
