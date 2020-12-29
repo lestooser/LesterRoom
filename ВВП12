@@ -1,0 +1,159 @@
+#include<string>
+#include<iostream>
+#include<locale.h>
+using namespace std;
+string y;
+string v1(int a) {
+	setlocale(LC_ALL, "ru");
+	switch (a) {
+		case (1): 
+			y = "первое";
+			return y;
+			break;
+		case(2): y = "второе";
+			return y;
+			break;
+		case(3): y = "третье";
+			return y;
+			break;
+		case(4): y = "четвертое";
+			return y;
+			break;
+		case(5): y = "пятое";
+			return y;
+			break;
+		case(6): y = "шестое";
+			return y;
+			break;
+		case(7): y = "седьмое";
+			return y;
+			break;
+		case(8): y = "восьмое";
+			return y;
+			break;
+		case(9): y = "девятое";
+			return y;
+			break;
+		case(10): y = "десятое";
+			return y;
+			break;
+		case(11): y = "одиннадцатое";
+			return y;
+			break;
+		case(12): y = "двенадцатое";
+			return y;
+			break;
+		case(13): y = "тринадцатое";
+			return y;
+			break;
+		case(14): y = "четырнадцатое";
+			return y;
+			break;
+		case(15): y = "пятнадцатое";
+			return y;
+			break;
+		case(16): y = "шестнадцатое";
+			return y;
+			break;
+		case(17): y = "семнадцатое";
+			return y;
+			break;
+		case(18): y = "восемнадцатое";
+			return y;
+			break;
+		case(19): y = "девятнадцатое";
+			return y;
+			break;
+		case(20): y = "двадцатое";
+			return y;
+			break;
+		case(21): y = "двадцать первое";
+			return y;
+			break;
+		case(22): y = "двадцать второе";
+			return y;
+			break;
+		case(23): y = "двадцать третье";
+			return y;
+			break;
+		case(24): y = "двадцать четвертое";
+			return y;
+			break;
+		case(25): y = "двадцать пятое";
+			return y;
+			break;
+		case(26): y = "двадцать шестое";
+			return y;
+			break;
+		case(27): y = "двадцать седьмое";
+			return y;
+			break;
+		case(28): y = "двадцать восьмое";
+			return y;
+			break;
+		case(29): y = "двадцать девятое";
+			return y;
+			break;
+		case(30): y = "традцатое";
+			return y;
+			break;
+		case(31): y = "тридцать первое";
+			return y;
+			break;
+		default: break;
+
+}
+}
+string v2(int b) {
+	setlocale(LC_ALL, "ru");
+	switch (b) {
+		case(1): 
+			y = "января";
+			return y;
+			break;
+		case(2): 
+			y = "февраля";
+			return y;
+			break;
+		case(3): y = "марта";
+			return y;
+			break;
+		case(4): y = "апреля";
+			return y;
+			break;
+		case(5): y = "мая";
+			return y;
+			break;
+		case(6): y = "июня";
+			return y;
+			break;
+		case(7): y = "июля";
+			return y;
+			break;
+		case(8): y = "августа";
+			return y;
+			break;
+		case(9): y = "сентября";
+			return y;
+			break;
+		case(10): y = "октября";
+			return y;
+			break;
+		case(11): y = "ноября";
+			return y;
+			break;
+		case(12): y = "декабря";
+			return y;
+			break;
+		default: break;
+	}
+}
+
+void main() {
+	setlocale(LC_ALL, "ru");
+	int a, b;
+	string result,a1,b2;
+	cin >> a >> b;
+	result = v1(a)+' '+v2(b);
+	cout << result;
+}
