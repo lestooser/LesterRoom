@@ -1,15 +1,15 @@
 #include <iostream>
 #include<math.h>
 using namespace std;
-double a, a1, b, b1, x, x1, e; 
-int k = 0, k1 = 0,z;
+double a, a1, b, b1, x, x1, e; //переменные для решения
+int k = 0, k1 = 0;//переменные для подсчёта интераций
 
-double f(double x1) {
+double f(double x1) { // функция f(x) 
 	x1 = x1 * exp(x1)-1;
 	return x1;
 }
 
-double j(double X) {
+double j(double X) { // преобразованная ф-ия f(x)
 	X = 1 / exp(X);
 	return X;
 }
@@ -24,30 +24,37 @@ void main() {
 	b1 = b;
 	cout << "Введите e = ";
 	cin >> e;
-	x = (a + b) / 2;
-	do
+	x = (a + b) / 2; // середина отрезка a,b
+	
+	// метод дихотомии
+	do  
 	{
-		if (f(a) * f(x) < 0)
-			b = x;
-		else a = x;
+		if (f(a) * f(x) < 0) // сравниваем значения (усл. выхода)
+			b = x; // сдвиг правой границы
+		else a = x; // сдвиг левой границы
 		x = (a + b) / 2;
-		k++;
+		k++; // подсчёт интераций
 
-	} while (abs(f(a) - f(b)) > e);	
+	} while (abs(f(a) - f(b)) > e);
 	cout << "По методу дихотомии : \n";
 	cout << "x=" << x << "\nинтераций : " << k << endl;
-	a = a1;
+	
+	// обнуление переменных
+	a = a1; 
 	b = b1;
 	x = (a + b) / 2;
-	while (abs(x - x1) > e) {
+	
+	// метод простых интераций
+	while (abs(x - x1) > e) {  
 		x1 = x;
 		x = j(x);
 		k1++;
 	}
 	cout << "\n" << "По методу  простых итераций : \n";
 	cout << "x=" << x << "\nинтераций : " << k1 << endl;
-	z = abs(k - k1);
+	
+	// сравнение
 	if (k > k1) 
-		printf("\nМетод простых интераций оказался быстрее на %d интер.\n ", z);
-	else printf("\nМетод дихотомии оказался быстрее на %d интер. \n", z);
+		printf("\nМетод простых интераций оказался быстрее на %d интер.\n ", abs(k - k1));
+	else printf("\nМетод дихотомии оказался быстрее на %d интер. \n", abs(k - k1));
 }
